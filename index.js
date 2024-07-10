@@ -3,8 +3,8 @@ import dotenv from 'dotenv';
 import morgan from 'morgan';
 import cors from 'cors';
 import colors from 'colors';
-import routes from './routes/index.js';
-import middleware from './middlewares/expressMiddleware.js';
+import routes from './src/routes/index.js';
+import middleware from './src/middlewares/expressMiddleware.js';
 
 dotenv.config();
 
