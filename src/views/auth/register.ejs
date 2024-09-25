@@ -55,34 +55,21 @@
         </div>
         <div class="row clearfix">
           <div class="">
-            <form>
-              <div class="input_field">
-                <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
-                <input type="email" name="email" placeholder="Email" required />
-              </div>
-              <div class="input_field">
-                <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  required
-                />
-              </div>
-              <div class="input_field">
-                <span><i aria-hidden="true" class="fa fa-lock"></i></span>
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Re-type Password"
-                  required
-                />
-              </div>
+            <form id="registration">
               <div class="row clearfix">
                 <div class="col_half">
                   <div class="input_field">
                     <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                    <input type="text" name="name" placeholder="First Name" />
+                    <input
+                      type="text"
+                      id="first_name"
+                      name="first_name"
+                      placeholder="First Name"
+                    />
+                    <div
+                      id="first_nameError"
+                      class="error-message text-danger"
+                    ></div>
                   </div>
                 </div>
                 <div class="col_half">
@@ -90,35 +77,113 @@
                     <span><i aria-hidden="true" class="fa fa-user"></i></span>
                     <input
                       type="text"
-                      name="name"
+                      id="last_name"
+                      name="last_name"
                       placeholder="Last Name"
-                      required
                     />
+                    <div
+                      id="last_nameError"
+                      class="error-message text-danger"
+                    ></div>
                   </div>
                 </div>
               </div>
-
+              <div class="row clearfix">
+                <div class="col_half">
+                  <div class="input_field">
+                    <span
+                      ><i aria-hidden="true" class="fa fa-envelope"></i
+                    ></span>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Email"
+                    />
+                    <div
+                      id="emailError"
+                      class="error-message text-danger"
+                    ></div>
+                  </div>
+                </div>
+                <div class="col_half">
+                  <div class="input_field">
+                    <span><i aria-hidden="true" class="fa fa-phone"></i></span>
+                    <input
+                      type="text"
+                      id="phone_number"
+                      name="phone_number"
+                      placeholder="Phone Number"
+                    />
+                    <div
+                      id="phone_numberError"
+                      class="error-message text-danger"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row clearfix">
+                <div class="col_half">
+                  <div class="input_field">
+                    <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      placeholder="Password"
+                    />
+                    <div
+                      id="passwordError"
+                      class="error-message text-danger"
+                    ></div>
+                  </div>
+                </div>
+                <div class="col_half">
+                  <div class="input_field">
+                    <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                    <input
+                      type="password"
+                      id="confirmPassword"
+                      name="confirmPassword"
+                      placeholder="Re-type Password"
+                    />
+                    <div
+                      id="confirmPasswordError"
+                      class="error-message text-danger"
+                    ></div>
+                  </div>
+                </div>
+              </div>
               <div class="input_field select_option">
-                <select>
-                  <option>Select gender</option>
-                  <option>Male</option>
-                  <option>Female</option>
+                <% const gender = ["Male", "Female"]; %>
+                <select name="gender">
+                  <option value="">Select gender</option>
+                  <% gender.forEach((g )=> { %>
+                  <option value="<%- g  %>"><%- g %></option>
+                  <% }) %>
                 </select>
                 <div class="select_arrow"></div>
+                <div id="genderError" class="error-message text-danger"></div>
               </div>
               <div class="input_field checkbox_option">
                 <input type="checkbox" id="cb1" />
                 <label for="cb1">I agree with terms and conditions</label>
               </div>
               <input class="button" type="submit" value="Register" />
-              <span
-                ><a
-                  href="/auth/login"
-                  style="text-decoration: none; color: black"
-                  >Oh remember password!</a
-                ></span
-              >
             </form>
+            <span>
+              <a href="/auth/login" style="text-decoration: none; color: black"
+                >Login!
+              </a>
+              <a
+                href="/auth/forget-password"
+                style="text-decoration: none; float: right; color: black"
+                >Forget password!
+              </a>
+            </span>
+            <!-- <script type="module">
+             
+            </script> -->
           </div>
         </div>
       </div>
@@ -131,5 +196,7 @@
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../mail/register.js"></script>
   </body>
 </html>

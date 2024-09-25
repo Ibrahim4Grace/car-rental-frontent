@@ -152,6 +152,10 @@
                         placeholder="Your firstName"
                       />
                       <label for="name">Your Firstname</label>
+                      <div
+                        id="firstNameError"
+                        class="error-message text-danger"
+                      ></div>
                     </div>
                   </div>
                   <div class="col-lg-12 col-xl-6">
@@ -163,6 +167,10 @@
                         placeholder="Your LastName"
                       />
                       <label for="lastName">Your LastName</label>
+                      <div
+                        id="lastNameError"
+                        class="error-message text-danger"
+                      ></div>
                     </div>
                   </div>
                   <div class="col-lg-12 col-xl-6">
@@ -170,10 +178,14 @@
                       <input
                         type="phone"
                         class="form-control"
-                        id="phone"
+                        name="phone"
                         placeholder="Phone"
                       />
                       <label for="phone">Your Phone</label>
+                      <div
+                        id="phoneError"
+                        class="error-message text-danger"
+                      ></div>
                     </div>
                   </div>
                   <div class="col-lg-12 col-xl-6">
@@ -181,10 +193,14 @@
                       <input
                         type="email"
                         class="form-control"
-                        id="email"
+                        name="email"
                         placeholder="Your Email"
                       />
                       <label for="email">Your Email</label>
+                      <div
+                        id="emailError"
+                        class="error-message text-danger"
+                      ></div>
                     </div>
                   </div>
                   <div class="col-12">
@@ -192,10 +208,14 @@
                       <input
                         type="text"
                         class="form-control"
-                        id="subject"
+                        name="subject"
                         placeholder="Subject"
                       />
                       <label for="subject">Subject</label>
+                      <div
+                        id="subjectError"
+                        class="error-message text-danger"
+                      ></div>
                     </div>
                   </div>
                   <div class="col-12">
@@ -203,19 +223,28 @@
                       <textarea
                         class="form-control"
                         placeholder="Leave a message here"
-                        id="message"
+                        name="message"
                         style="height: 160px"
+                        maxlength="250"
                       ></textarea>
                       <label for="message">Message</label>
+                      <div
+                        id="messageError"
+                        class="error-message text-danger"
+                      ></div>
                     </div>
                   </div>
                   <div class="col-12">
-                    <button class="btn btn-light w-100 py-3">
+                    <button class="btn btn-light w-100 py-3" type="submit">
                       Send Message
                     </button>
                   </div>
                 </div>
               </form>
+              <div id="thankYouMessage" style="display: none">
+                Thank you, your message has been sent. A member of our team will
+                get back to you shortly.
+              </div>
             </div>
           </div>
           <div class="col-12 col-xl-1 wow fadeInUp" data-wow-delay="0.3s">

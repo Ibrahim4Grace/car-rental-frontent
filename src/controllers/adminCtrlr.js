@@ -14,6 +14,10 @@ export const reservationsPage = (req, res) => {
   res.render('admin/reservations');
 };
 
+export const reservationsdeatailsPage = (req, res) => {
+  res.render('admin/reservation-details');
+};
+
 export const rentedcarsPage = (req, res) => {
   res.render('admin/rentedcars');
 };

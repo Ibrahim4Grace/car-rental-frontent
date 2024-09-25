@@ -4,8 +4,9 @@ import { authCtrlr } from '../controllers/index.js';
 const router = express.Router();
 
 router.get('/register', authCtrlr.register);
+router.get('/verify-otp', authCtrlr.verifyOtp);
 router.get('/login', authCtrlr.login);
-router.get('/forgetPassword', authCtrlr.forgetPassword);
-router.get('/resetPassword', authCtrlr.resetPassword);
+router.get('/forget-password', authCtrlr.forgetPassword);
+router.get('/reset-password/:token', authCtrlr.resetPassword);
 
 export default router;

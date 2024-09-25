@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Korex autos admin</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="../img/favi.jpg" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link
+      href="../dhbd-lib/owlcarousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../dhbd-lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../dhbd-css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="../dhbd-css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+      <!-- Spinner & Sidebar Start -->
+      <%- include (`../partials/adminHeader`); -%>
+      <!-- Spinner & Sidebar End -->
+
+      <!-- Content Start -->
+      <div class="content">
+        <!-- Navbar Start -->
+        <%- include (`../partials/adminNav`); -%>
+        <!-- Navbar End -->
+
+        <!-- Sale & Revenue Start -->
+        <div class="container-fluid pt-4 px-4">
+          <div class="row g-4">
+            <div class="col-sm-6 col-xl-3">
+              <div
+                class="bg-light rounded d-flex align-items-center justify-content-between p-4"
+              >
+                <i class="fa fa-chart-line fa-3x text-primary"></i>
+                <div class="ms-3">
+                  <p class="mb-2">Total Reservations</p>
+                  <h6 class="mb-0">$1234</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div
+                class="bg-light rounded d-flex align-items-center justify-content-between p-4"
+              >
+                <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                <div class="ms-3">
+                  <p class="mb-2">New Reservations</p>
+                  <h6 class="mb-0">$1234</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div
+                class="bg-light rounded d-flex align-items-center justify-content-between p-4"
+              >
+                <i class="fa fa-chart-area fa-3x text-primary"></i>
+                <div class="ms-3">
+                  <p class="mb-2">Canceled Reservations</p>
+                  <h6 class="mb-0">$1234</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div
+                class="bg-light rounded d-flex align-items-center justify-content-between p-4"
+              >
+                <i class="fa fa-chart-pie fa-3x text-primary"></i>
+                <div class="ms-3">
+                  <p class="mb-2">New Booking</p>
+                  <h6 class="mb-0">$1234</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sale & Revenue End -->
+
+        <!-- Recent Sales Start -->
+        <div class="container-fluid pt-4 px-4">
+          <div class="bg-light text-center rounded p-4">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              <h6 class="mb-0">Reservations</h6>
+            </div>
+            <div class="table-responsive">
+              <table
+                class="table text-start align-middle table-bordered table-hover mb-0"
+              >
+                <thead>
+                  <tr class="text-dark">
+                    <th scope="col">ID</th>
+                    <th scope="col">CAR</th>
+                    <th scope="col">CUSTOMER</th>
+                    <th scope="col">PICK-UP</th>
+                    <th scope="col">DROP-OFF</th>
+                    <th scope="col">STATUS</th>
+                    <th scope="col">PRICE</th>
+                    <th scope="col" class="text-end">ACTIONS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong class="text-heading">#2179</strong>
+                    </td>
+                    <td>
+                      <strong>Volkswagen - Golf TSI 2017</strong>
+                    </td>
+                    <td>
+                      <strong>Lance Bogrol</strong>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">Apr 9, 2023</strong>
+                      <small class="d-block">1308 Midway Road</small>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">Apr 12, 2023</strong>
+                      <small class="d-block">3532 Ward Road</small>
+                    </td>
+                    <td>
+                      <span class="badge rounded-pill badge-soft text-bg-info"
+                        >New</span
+                      >
+                    </td>
+                    <td>
+                      <strong>$92,20</strong>
+                    </td>
+                    <td>
+                      <div class="dropdown text-end">
+                        <button
+                          type="button"
+                          class="outline-none dropdown-toggle arrow-none border-0 height-40 rounded ps3 bg-body-secondary opacity-75"
+                          data-bs-auto-close="outside"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <span class="text-heading">Actions</span>
+                          <i
+                            data-feather="chevron-down"
+                            stroke-width="2"
+                            height="16"
+                            class="text-heading"
+                          ></i>
+                        </button>
+                        <ul class="dropdown-menu text-start">
+                          <li><a class="dropdown-item" href="#">Edit</a></li>
+                          <li><a class="dropdown-item" href="#">Details</a></li>
+                          <li>
+                            <a
+                              class="dropdown-item d-flex align-items-center justify-content-between"
+                              href="#"
+                            >
+                              Delete
+                              <i
+                                data-feather="info"
+                                stroke-width="2"
+                                height="12"
+                                class="text-body me1"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="left"
+                                data-bs-custom-class="qd-tooltip"
+                                data-bs-title="If you delete it, this action cannot be undone."
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong class="text-heading">#2178</strong>
+                    </td>
+                    <td>
+                      <strong>Mercedes - AMG GT 2019</strong>
+                    </td>
+                    <td>
+                      <strong>Dylan Meringue</strong>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">May 1, 2023</strong>
+                      <small class="d-block">2647 Warner Street</small>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">May 4, 2023</strong>
+                      <small class="d-block">4717 Ray Court</small>
+                    </td>
+                    <td>
+                      <span class="badge rounded-pill badge-soft text-bg-info"
+                        >New</span
+                      >
+                    </td>
+                    <td>
+                      <strong>$126,12</strong>
+                    </td>
+                    <td>
+                      <div class="dropdown text-end">
+                        <button
+                          type="button"
+                          class="outline-none dropdown-toggle arrow-none border-0 height-40 rounded ps3 bg-body-secondary opacity-75"
+                          data-bs-auto-close="outside"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <span class="text-heading">Actions</span>
+                          <i
+                            data-feather="chevron-down"
+                            stroke-width="2"
+                            height="16"
+                            class="text-heading"
+                          ></i>
+                        </button>
+                        <ul class="dropdown-menu text-start">
+                          <li><a class="dropdown-item" href="#">Edit</a></li>
+                          <li><a class="dropdown-item" href="#">Details</a></li>
+                          <li>
+                            <a
+                              class="dropdown-item d-flex align-items-center justify-content-between"
+                              href="#"
+                            >
+                              Delete
+                              <i
+                                data-feather="info"
+                                stroke-width="2"
+                                height="12"
+                                class="text-body me1"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="left"
+                                data-bs-custom-class="qd-tooltip"
+                                data-bs-title="If you delete it, this action cannot be undone."
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong class="text-heading">#2177</strong>
+                    </td>
+                    <td>
+                      <strong>Toyota - 4Runner 2018</strong>
+                    </td>
+                    <td>
+                      <strong>Phillip Anthropy</strong>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">Jun 12, 2023</strong>
+                      <small class="d-block">3246 Charter Street</small>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">Jun 18, 2023</strong>
+                      <small class="d-block">4674 Dale Avenue</small>
+                    </td>
+                    <td>
+                      <span
+                        class="badge rounded-pill badge-soft text-bg-success"
+                        >Accepted</span
+                      >
+                    </td>
+                    <td>
+                      <strong>$45,00</strong>
+                    </td>
+                    <td>
+                      <div class="dropdown text-end">
+                        <button
+                          type="button"
+                          class="outline-none dropdown-toggle arrow-none border-0 height-40 rounded ps3 bg-body-secondary opacity-75"
+                          data-bs-auto-close="outside"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <span class="text-heading">Actions</span>
+                          <i
+                            data-feather="chevron-down"
+                            stroke-width="2"
+                            height="16"
+                            class="text-heading"
+                          ></i>
+                        </button>
+                        <ul class="dropdown-menu text-start">
+                          <li><a class="dropdown-item" href="#">Edit</a></li>
+                          <li><a class="dropdown-item" href="#">Details</a></li>
+                          <li>
+                            <a
+                              class="dropdown-item d-flex align-items-center justify-content-between"
+                              href="#"
+                            >
+                              Delete
+                              <i
+                                data-feather="info"
+                                stroke-width="2"
+                                height="12"
+                                class="text-body me1"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="left"
+                                data-bs-custom-class="qd-tooltip"
+                                data-bs-title="If you delete it, this action cannot be undone."
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong class="text-heading">#2176</strong>
+                    </td>
+                    <td>
+                      <strong>Nissan - Altima 2020</strong>
+                    </td>
+                    <td>
+                      <strong>Eric Widget</strong>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">May 8, 2023</strong>
+                      <small class="d-block">4814 Griffin Street</small>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">May 16, 2023</strong>
+                      <small class="d-block">296 Kincheloe Road</small>
+                    </td>
+                    <td>
+                      <span
+                        class="badge rounded-pill badge-soft text-bg-success"
+                        >Accepted</span
+                      >
+                    </td>
+                    <td>
+                      <strong>$78,25</strong>
+                    </td>
+                    <td>
+                      <div class="dropdown text-end">
+                        <button
+                          type="button"
+                          class="outline-none dropdown-toggle arrow-none border-0 height-40 rounded ps3 bg-body-secondary opacity-75"
+                          data-bs-auto-close="outside"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <span class="text-heading">Actions</span>
+                          <i
+                            data-feather="chevron-down"
+                            stroke-width="2"
+                            height="16"
+                            class="text-heading"
+                          ></i>
+                        </button>
+                        <ul class="dropdown-menu text-start">
+                          <li><a class="dropdown-item" href="#">Edit</a></li>
+                          <li><a class="dropdown-item" href="#">Details</a></li>
+                          <li>
+                            <a
+                              class="dropdown-item d-flex align-items-center justify-content-between"
+                              href="#"
+                            >
+                              Delete
+                              <i
+                                data-feather="info"
+                                stroke-width="2"
+                                height="12"
+                                class="text-body me1"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="left"
+                                data-bs-custom-class="qd-tooltip"
+                                data-bs-title="If you delete it, this action cannot be undone."
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong class="text-heading">#2175</strong>
+                    </td>
+                    <td>
+                      <strong>Subaru - Outback 2019</strong>
+                    </td>
+                    <td>
+                      <strong>Douglas Lyphe</strong>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">Jun 22, 2023</strong>
+                      <small class="d-block">3190 Eagles Nest Drive</small>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">Jun 28, 2023</strong>
+                      <small class="d-block">3265 Morgan Street</small>
+                    </td>
+                    <td>
+                      <span
+                        class="badge rounded-pill badge-soft text-bg-success"
+                        >Accepted</span
+                      >
+                    </td>
+                    <td>
+                      <strong>$90,50</strong>
+                    </td>
+                    <td>
+                      <div class="dropdown text-end">
+                        <button
+                          type="button"
+                          class="outline-none dropdown-toggle arrow-none border-0 height-40 rounded ps3 bg-body-secondary opacity-75"
+                          data-bs-auto-close="outside"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <span class="text-heading">Actions</span>
+                          <i
+                            data-feather="chevron-down"
+                            stroke-width="2"
+                            height="16"
+                            class="text-heading"
+                          ></i>
+                        </button>
+                        <ul class="dropdown-menu text-start">
+                          <li><a class="dropdown-item" href="#">Edit</a></li>
+                          <li><a class="dropdown-item" href="#">Details</a></li>
+                          <li>
+                            <a
+                              class="dropdown-item d-flex align-items-center justify-content-between"
+                              href="#"
+                            >
+                              Delete
+                              <i
+                                data-feather="info"
+                                stroke-width="2"
+                                height="12"
+                                class="text-body me1"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="left"
+                                data-bs-custom-class="qd-tooltip"
+                                data-bs-title="If you delete it, this action cannot be undone."
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong class="text-heading">#2174</strong>
+                    </td>
+                    <td>
+                      <strong>Volkswagen - Golf TSI 2017</strong>
+                    </td>
+                    <td>
+                      <strong>Samuel Serif</strong>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">Sep 1, 2023</strong>
+                      <small class="d-block">263 Sunburst Drive</small>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">Sep 7, 2023</strong>
+                      <small class="d-block">3883 Traction Street</small>
+                    </td>
+                    <td>
+                      <span class="badge rounded-pill badge-soft text-bg-danger"
+                        >Canceled</span
+                      >
+                    </td>
+                    <td>
+                      <strong>$70,25</strong>
+                    </td>
+                    <td>
+                      <div class="dropdown text-end">
+                        <button
+                          type="button"
+                          class="outline-none dropdown-toggle arrow-none border-0 height-40 rounded ps3 bg-body-secondary opacity-75"
+                          data-bs-auto-close="outside"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <span class="text-heading">Actions</span>
+                          <i
+                            data-feather="chevron-down"
+                            stroke-width="2"
+                            height="16"
+                            class="text-heading"
+                          ></i>
+                        </button>
+                        <ul class="dropdown-menu text-start">
+                          <li><a class="dropdown-item" href="#">Edit</a></li>
+                          <li><a class="dropdown-item" href="#">Details</a></li>
+                          <li>
+                            <a
+                              class="dropdown-item d-flex align-items-center justify-content-between"
+                              href="#"
+                            >
+                              Delete
+                              <i
+                                data-feather="info"
+                                stroke-width="2"
+                                height="12"
+                                class="text-body me1"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="left"
+                                data-bs-custom-class="qd-tooltip"
+                                data-bs-title="If you delete it, this action cannot be undone."
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong class="text-heading">#2173</strong>
+                    </td>
+                    <td>
+                      <strong>Toyota - 4Runner 2018</strong>
+                    </td>
+                    <td>
+                      <strong>Bodrum Salvador</strong>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">Sep 18, 2023</strong>
+                      <small class="d-block">4327 Turnpike Drive</small>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">Sep 26, 2023</strong>
+                      <small class="d-block">2122 Kembery Drive</small>
+                    </td>
+                    <td>
+                      <span
+                        class="badge rounded-pill badge-soft text-bg-success"
+                        >Accepted</span
+                      >
+                    </td>
+                    <td>
+                      <strong>$146,50</strong>
+                    </td>
+                    <td>
+                      <div class="dropdown text-end">
+                        <button
+                          type="button"
+                          class="outline-none dropdown-toggle arrow-none border-0 height-40 rounded ps3 bg-body-secondary opacity-75"
+                          data-bs-auto-close="outside"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <span class="text-heading">Actions</span>
+                          <i
+                            data-feather="chevron-down"
+                            stroke-width="2"
+                            height="16"
+                            class="text-heading"
+                          ></i>
+                        </button>
+                        <ul class="dropdown-menu text-start">
+                          <li><a class="dropdown-item" href="#">Edit</a></li>
+                          <li><a class="dropdown-item" href="#">Details</a></li>
+                          <li>
+                            <a
+                              class="dropdown-item d-flex align-items-center justify-content-between"
+                              href="#"
+                            >
+                              Delete
+                              <i
+                                data-feather="info"
+                                stroke-width="2"
+                                height="12"
+                                class="text-body me1"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="left"
+                                data-bs-custom-class="qd-tooltip"
+                                data-bs-title="If you delete it, this action cannot be undone."
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong class="text-heading">#2172</strong>
+                    </td>
+                    <td>
+                      <strong>Mercedes - AMG GT 2019</strong>
+                    </td>
+                    <td>
+                      <strong>Elon Gated</strong>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">May 16, 2023</strong>
+                      <small class="d-block">3542 Bryan Avenue</small>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">May 28, 2023</strong>
+                      <small class="d-block">512 Lowes Alley</small>
+                    </td>
+                    <td>
+                      <span
+                        class="badge rounded-pill badge-soft text-bg-success"
+                        >Accepted</span
+                      >
+                    </td>
+                    <td>
+                      <strong>$256,32</strong>
+                    </td>
+                    <td>
+                      <div class="dropdown text-end">
+                        <button
+                          type="button"
+                          class="outline-none dropdown-toggle arrow-none border-0 height-40 rounded ps3 bg-body-secondary opacity-75"
+                          data-bs-auto-close="outside"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <span class="text-heading">Actions</span>
+                          <i
+                            data-feather="chevron-down"
+                            stroke-width="2"
+                            height="16"
+                            class="text-heading"
+                          ></i>
+                        </button>
+                        <ul class="dropdown-menu text-start">
+                          <li><a class="dropdown-item" href="#">Edit</a></li>
+                          <li><a class="dropdown-item" href="#">Details</a></li>
+                          <li>
+                            <a
+                              class="dropdown-item d-flex align-items-center justify-content-between"
+                              href="#"
+                            >
+                              Delete
+                              <i
+                                data-feather="info"
+                                stroke-width="2"
+                                height="12"
+                                class="text-body me1"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="left"
+                                data-bs-custom-class="qd-tooltip"
+                                data-bs-title="If you delete it, this action cannot be undone."
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong class="text-heading">#2171</strong>
+                    </td>
+                    <td>
+                      <strong>Nissan - Altima 2020</strong>
+                    </td>
+                    <td>
+                      <strong>Jake Weary</strong>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">Jun 7, 2023</strong>
+                      <small class="d-block">1134 Dovetail Drive</small>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">Jun 16, 2023</strong>
+                      <small class="d-block">1005 Coplin Avenue</small>
+                    </td>
+                    <td>
+                      <span
+                        class="badge rounded-pill badge-soft text-bg-success"
+                        >Accepted</span
+                      >
+                    </td>
+                    <td>
+                      <strong>$120,54</strong>
+                    </td>
+                    <td>
+                      <div class="dropdown text-end">
+                        <button
+                          type="button"
+                          class="outline-none dropdown-toggle arrow-none border-0 height-40 rounded ps3 bg-body-secondary opacity-75"
+                          data-bs-auto-close="outside"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <span class="text-heading">Actions</span>
+                          <i
+                            data-feather="chevron-down"
+                            stroke-width="2"
+                            height="16"
+                            class="text-heading"
+                          ></i>
+                        </button>
+                        <ul class="dropdown-menu text-start">
+                          <li><a class="dropdown-item" href="#">Edit</a></li>
+                          <li><a class="dropdown-item" href="#">Details</a></li>
+                          <li>
+                            <a
+                              class="dropdown-item d-flex align-items-center justify-content-between"
+                              href="#"
+                            >
+                              Delete
+                              <i
+                                data-feather="info"
+                                stroke-width="2"
+                                height="12"
+                                class="text-body me1"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="left"
+                                data-bs-custom-class="qd-tooltip"
+                                data-bs-title="If you delete it, this action cannot be undone."
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong class="text-heading">#2170</strong>
+                    </td>
+                    <td>
+                      <strong>Volkswagen - Golf TSI 2017</strong>
+                    </td>
+                    <td>
+                      <strong>Brian Cumin</strong>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">Apr 9, 2023</strong>
+                      <small class="d-block">4847 Alexander Drive</small>
+                    </td>
+                    <td>
+                      <strong class="d-block mb1">Apr 12, 2023</strong>
+                      <small class="d-block">2259 Timbercrest Road</small>
+                    </td>
+                    <td>
+                      <span class="badge rounded-pill badge-soft text-bg-danger"
+                        >Canceled</span
+                      >
+                    </td>
+                    <td>
+                      <strong>$60,30</strong>
+                    </td>
+                    <td>
+                      <div class="dropdown text-end">
+                        <button
+                          type="button"
+                          class="outline-none dropdown-toggle arrow-none border-0 height-40 rounded ps3 bg-body-secondary opacity-75"
+                          data-bs-auto-close="outside"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <span class="text-heading">Actions</span>
+                          <i
+                            data-feather="chevron-down"
+                            stroke-width="2"
+                            height="16"
+                            class="text-heading"
+                          ></i>
+                        </button>
+                        <ul class="dropdown-menu text-start">
+                          <li><a class="dropdown-item" href="#">Edit</a></li>
+                          <li><a class="dropdown-item" href="#">Details</a></li>
+                          <li>
+                            <a
+                              class="dropdown-item d-flex align-items-center justify-content-between"
+                              href="#"
+                            >
+                              Delete
+                              <i
+                                data-feather="info"
+                                stroke-width="2"
+                                height="12"
+                                class="text-body me1"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="left"
+                                data-bs-custom-class="qd-tooltip"
+                                data-bs-title="If you delete it, this action cannot be undone."
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- Recent Sales End -->
+
+        <!-- Footer Start -->
+        <%- include (`../partials/adminFooter`); -%>
+        <!-- Footer End -->
+      </div>
+      <!-- Content End -->
+
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+        ><i class="bi bi-arrow-up"></i
+      ></a>
+    </div>
+  </body>
+</html>

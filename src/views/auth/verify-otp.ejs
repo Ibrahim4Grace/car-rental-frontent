@@ -51,38 +51,23 @@
     <div class="form_wrapper">
       <div class="form_container">
         <div class="title_container">
-          <h2>Welcome User</h2>
+          <h2>Verify Otp</h2>
         </div>
         <div class="row clearfix">
           <div class="">
-            <form>
-              <div class="input_field">
-                <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
-                <input type="email" id="email" name="email" placeholder="Email"/>
-              </div>
+            <form id="otp-form">
               <div class="input_field">
                 <span><i aria-hidden="true" class="fa fa-lock"></i></span>
                 <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  placeholder="Password"
+                  type="text"
+                  id="otp"
+                  name="otp"
+                  placeholder="Enter code"
                 />
               </div>
 
               <input class="button" type="submit" value="Login" />
-              <span
-                ><a
-                  href="/auth/register"
-                  style="text-decoration: none; color: black"
-                  >New register!</a
-                >
-                <a
-                href="/auth/forget-password"
-                style="text-decoration: none; float:right ; color: black"
-                >Forget password!</a
-                </span
-              >
+
               <div class="or-separator">
                 <span>or</span>
               </div>
