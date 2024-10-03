@@ -11,7 +11,7 @@ export const bookingPage = (req, res) => {
 };
 
 export const schedulePage = (req, res) => {
-  res.render('user/schedule');
+  res.render('user/rental-history');
 };
 
 export const profilePage = (req, res) => {

@@ -3,11 +3,11 @@ export const adminPage = (req, res) => {
 };
 
 export const carListPage = (req, res) => {
-  res.render('admin/carList');
+  res.render('admin/car-list');
 };
 
 export const carDetailsPage = (req, res) => {
-  res.render('admin/carDetails');
+  res.render('admin/car-details');
 };
 
 export const reservationsPage = (req, res) => {
@@ -18,8 +18,16 @@ export const reservationsdeatailsPage = (req, res) => {
   res.render('admin/reservation-details');
 };
 
+export const reservationsAcceptPage = (req, res) => {
+  res.render('admin/accept-reservation');
+};
+
+export const reservationsRejectPage = (req, res) => {
+  res.render('admin/reject-reservation');
+};
+
 export const rentedcarsPage = (req, res) => {
-  res.render('admin/rentedcars');
+  res.render('admin/rented-cars');
 };
 
 export const maintenanceCarsPage = (req, res) => {

@@ -41,39 +41,51 @@
         ><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a
       >
 
-      <a href="/admin/carList" class="nav-item nav-link"
-        ><i class="fa fa-th me-2"></i>Car List</a
-      >
-      <a href="/admin/carDetails" class="nav-item nav-link"
-        ><i class="fa fa-keyboard me-2"></i>Car details</a
-      >
-
       <div class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
-          ><i class="fa fa-user me-2"></i>Reservation</a
+          ><i class="fa fa-car me-2"></i>Cars</a
         >
         <div class="dropdown-menu bg-transparent border-0">
-          <a href="/admin/reservations" class="nav-link dropdown-item"
-            ><i class="fa fa-user me-2"></i>All Reserv</a
+          <a href="/admin/car-list" class="nav-link dropdown-item"
+            ><i class="fa fa-car me-2"></i>Car List</a
           >
-          <a href="/admin/reservation-details" class="nav-link dropdown-item"
-            ><i class="fa fa-user me-2"></i>Reserv Details</a
+          <a href="/admin/car-details" class="nav-link dropdown-item"
+            ><i class="fa fa-car me-2"></i>Car Details</a
+          >
+
+          <a href="/admin/rented-cars" class="nav-link dropdown-item"
+            ><i class="fa fa-car me-2"></i>Rented Cars</a
           >
         </div>
       </div>
 
-      <a href="/admin/rentedcars" class="nav-item nav-link"
-        ><i class="fa fa-chart-bar me-2"></i>Rented Cars</a
-      >
+      <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+          ><i class="fa fa-calendar me-2"></i>Reservation</a
+        >
+        <div class="dropdown-menu bg-transparent border-0">
+          <a href="/admin/reservations" class="nav-link dropdown-item"
+            ><i class="fa fa-calendar me-2"></i>New Reserv</a
+          >
+          <a href="/admin/reservation-details" class="nav-link dropdown-item"
+            ><i class="fa fa-calendar me-2"></i>Reserv Details</a
+          >
+
+          <a href="/admin/accept-reservation" class="nav-link dropdown-item"
+            ><i class="fa fa-calendar me-2"></i>Accept Reserv</a
+          >
+
+          <a href="/admin/reject-reservation" class="nav-link dropdown-item"
+            ><i class="fa fa-calendar me-2"></i>Reject Reserv</a
+          >
+        </div>
+      </div>
 
       <a href="/admin/maintenance-cars" class="nav-item nav-link"
         ><i class="fa fa-chart-bar me-2"></i>Maintenance</a
       >
-      <a href="/admin/new-bookings" class="nav-item nav-link"
-        ><i class="fa fa-chart-bar me-2"></i>New Booking</a
-      >
       <a href="/admin/users" class="nav-item nav-link"
-        ><i class="fa fa-table me-2"></i>Users</a
+        ><i class="fa fa-user me-2"></i>Users</a
       >
       <a
         id="adminSignOutLink"
