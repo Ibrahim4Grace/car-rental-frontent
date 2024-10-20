@@ -6,7 +6,7 @@ const baseURL =
     : 'https://car-rental-backend-lhm2.onrender.com';
 
 document
-  .getElementById('registrationForm')
+  .getElementById('contactUsForm')
   .addEventListener('submit', async (event) => {
     event.preventDefault();
 
@@ -20,41 +20,26 @@ document
     const data = Object.fromEntries(formData.entries());
 
     try {
-      const response = await axios.post(
-        `${baseURL}/api/v1/auth/register`,
-        data,
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
-      );
+      const response = await axios.post(`${baseURL}/api/v1/contact-us`, data, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
 
       const result = response.data;
-      if (result.message) {
-        alert(result.message);
-        window.location.href = '${baseURL}/api/v1/auth/verify-otp';
+      if (result.success) {
+        document.getElementById('contactUsForm').reset();
+        document.getElementById('contactUsForm').style.display = 'none';
+        document.getElementById('thankYouMessage').style.display = 'block';
       }
     } catch (error) {
-      if (error.response) {
-        const statusCode = error.response.status;
-        if (statusCode === 422 && error.response.data.errors) {
-          const errors = error.response.data.errors;
-          errors.forEach((err) => {
-            const fieldName = err.path[0]; // Get the field name from the error
-            const errorMessage = err.message; // Get the error message
-            const errorElement = document.getElementById(`${fieldName}Error`);
-            if (errorElement) {
-              errorElement.innerHTML = errorMessage;
-            }
-          });
-        } else if (statusCode === 409) {
-          alert('Email already registered!');
-        } else {
-          const generalErrorMessage =
-            error.response.data.message || 'An unexpected error occurred';
-          alert(generalErrorMessage);
-        }
+      if (error.response && error.response.data && error.response.data.errors) {
+        const errors = error.response.data.errors;
+        errors.forEach((err) => {
+          const fieldName = err.path[0]; // Get the field name from the error
+          const errorMessage = err.message; // Get the error message
+          document.getElementById(`${fieldName}Error`).innerHTML = errorMessage;
+        });
       } else {
         alert('An error occurred: ' + error.message);
       }

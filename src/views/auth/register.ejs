@@ -55,19 +55,19 @@
         </div>
         <div class="row clearfix">
           <div class="">
-            <form id="registration">
+            <form id="registrationForm" method="post">
               <div class="row clearfix">
                 <div class="col_half">
                   <div class="input_field">
                     <span><i aria-hidden="true" class="fa fa-user"></i></span>
                     <input
                       type="text"
-                      id="first_name"
-                      name="first_name"
+                      id="firstName"
+                      name="firstName"
                       placeholder="First Name"
                     />
                     <div
-                      id="first_nameError"
+                      id="firstNameError"
                       class="error-message text-danger"
                     ></div>
                   </div>
@@ -77,12 +77,12 @@
                     <span><i aria-hidden="true" class="fa fa-user"></i></span>
                     <input
                       type="text"
-                      id="last_name"
-                      name="last_name"
+                      id="lastName"
+                      name="lastName"
                       placeholder="Last Name"
                     />
                     <div
-                      id="last_nameError"
+                      id="lastNameError"
                       class="error-message text-danger"
                     ></div>
                   </div>
@@ -111,12 +111,12 @@
                     <span><i aria-hidden="true" class="fa fa-phone"></i></span>
                     <input
                       type="text"
-                      id="phone_number"
-                      name="phone_number"
+                      id="phone"
+                      name="phone"
                       placeholder="Phone Number"
                     />
                     <div
-                      id="phone_numberError"
+                      id="phoneError"
                       class="error-message text-danger"
                     ></div>
                   </div>
@@ -143,12 +143,12 @@
                     <span><i aria-hidden="true" class="fa fa-lock"></i></span>
                     <input
                       type="password"
-                      id="confirmPassword"
-                      name="confirmPassword"
+                      id="confirm_password"
+                      name="confirm_password"
                       placeholder="Re-type Password"
                     />
                     <div
-                      id="confirmPasswordError"
+                      id="confirm_passwordError"
                       class="error-message text-danger"
                     ></div>
                   </div>
@@ -165,11 +165,16 @@
                 <div class="select_arrow"></div>
                 <div id="genderError" class="error-message text-danger"></div>
               </div>
-              <div class="input_field checkbox_option">
-                <input type="checkbox" id="cb1" />
-                <label for="cb1">I agree with terms and conditions</label>
+
+              <div class="col-12">
+                <button
+                  class="btn w-100 py-3"
+                  type="submit"
+                  style="background-color: #1f2e4e; color: #fff"
+                >
+                  Register
+                </button>
               </div>
-              <input class="button" type="submit" value="Register" />
             </form>
             <span>
               <a href="/auth/login" style="text-decoration: none; color: black"
@@ -181,9 +186,6 @@
                 >Forget password!
               </a>
             </span>
-            <!-- <script type="module">
-             
-            </script> -->
           </div>
         </div>
       </div>

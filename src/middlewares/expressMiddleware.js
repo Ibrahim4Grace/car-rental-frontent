@@ -13,10 +13,10 @@ const middleware = express();
 
 middleware.use(
   session({
-    secret: customEnv.sessionSecret, // Provide the secret option here
+    secret: customEnv.sessionSecret,
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false }, // Set to true if using https
+    cookie: { secure: false },
   })
 );
 
