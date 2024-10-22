@@ -1,9 +1,13 @@
 'use strict';
-
 const baseURL =
   window.location.hostname === 'localhost'
     ? 'http://localhost:8000'
     : 'https://car-rental-backend-lhm2.onrender.com';
+
+const frontendURL =
+  window.location.hostname === 'localhost'
+    ? 'http://localhost:8080'
+    : 'https://car-rental-frontend.vercel.app';
 
 document
   .getElementById('registrationForm')
@@ -33,7 +37,7 @@ document
       const result = response.data;
       if (result.message) {
         alert(result.message);
-        window.location.href = '${baseURL}/api/v1/auth/verify-otp';
+        window.location.href = `${frontendURL}/auth/verify-otp`;
       }
     } catch (error) {
       if (error.response) {

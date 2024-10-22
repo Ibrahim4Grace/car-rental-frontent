@@ -16,7 +16,11 @@ middleware.use(
     secret: customEnv.sessionSecret,
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false },
+    cookie: {
+      secure: false, // Set to true in production
+      httpOnly: true, // Helps prevent XSS attacks
+      maxAge: 1000 * 60 * 60 * 24, // 1 day
+    },
   })
 );
 
