@@ -11,19 +11,9 @@ const frontendURL =
     : 'https://car-rental-frontend.vercel.app';
 
 document
-  .getElementById('resetPasswordForm')
+  .getElementById('loginForm')
   .addEventListener('submit', async (event) => {
     event.preventDefault();
-
-    const urlPath = window.location.pathname;
-    const token = urlPath.split('/').pop();
-    console.log('Token:', token);
-
-    if (!token) {
-      alert('Token is missing in the URL');
-      window.location.href = '/';
-      return;
-    }
 
     const submitButton = event.target.querySelector('button[type="submit"]');
 
@@ -33,25 +23,19 @@ document
 
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData.entries());
-    data.token = token;
 
     try {
-      const response = await axios.post(
-        `${baseURL}/api/v1/auth/reset-password/${token}`,
-        data,
-
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          withCredentials: true,
-        }
-      );
+      const response = await axios.post(`${baseURL}/api/v1/auth/login`, data, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        withCredentials: true,
+      });
 
       const result = response.data;
       if (result.message) {
         alert(result.message);
-        window.location.href = `${frontendURL}/auth/login`;
+        window.location.href = `${frontendURL}/user/index`;
       }
     } catch (error) {
       if (error.response) {
